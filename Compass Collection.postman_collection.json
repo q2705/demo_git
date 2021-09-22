@@ -1,0 +1,254 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Compass Collection",
+		"_postman_id": "df6ed9f1-3d49-beb8-a972-1a28d5a67595",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get testcase detail",
+			"request": {
+				"url": "http://127.0.0.1:8082/gettestcasedetail",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"appName\" : \"Payments\",\n\t\"testcaseId\" : [\"Payments_NEFT Inward_05_TC_01\",\"Payments_RTGS Outward_06_TC_01\",\"Payments_RTGS Outward_07_TC_01\",\n\t\t\t\t\t\"Payments_RTGS Outward_08_TC_01\",\"Payments_RTGS Outward_09_TC_01\"],\n\t\"columns\" : [\"module\", \"submodule\", \"testcaseid\", \"scenarioname\", \"scenarioid\", \"description\", \"expectedresult\", \n\t\t\t\t\"userstory\", \"epic\", \"sprint\"]\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "b36713df-cd9e-4d9c-8939-f14e1aceda86",
+					"name": "Get testcase detail",
+					"originalRequest": {
+						"url": "http://127.0.0.1:8082/gettestcasedetail",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"appName\" : \"Payments\",\n\t\"testcaseId\" : [\"Payments_NEFT Inward_05_TC_01\",\"Payments_RTGS Outward_06_TC_01\",\"Payments_RTGS Outward_07_TC_01\",\n\t\t\t\t\t\"Payments_RTGS Outward_08_TC_01\",\"Payments_RTGS Outward_09_TC_01\"],\n\t\"columns\" : [\"module\", \"submodule\", \"testcaseid\", \"scenarioname\", \"scenarioid\", \"description\", \"expectedresult\", \n\t\t\t\t\"userstory\", \"epic\", \"sprint\"]\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-credentials",
+							"key": "access-control-allow-credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 21 May 2021 09:01:44 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "expires",
+							"key": "expires",
+							"value": "0",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"name": "pragma",
+							"key": "pragma",
+							"value": "no-cache",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-content-type-options",
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"name": "x-frame-options",
+							"key": "x-frame-options",
+							"value": "DENY",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"name": "x-xss-protection",
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [],
+					"responseTime": 208,
+					"body": "[{\"testcaseid\":\"Payments_NEFT Inward_05_TC_01\",\"module\":\"NEFT\",\"sprint\":\"PAYM Sprint 1,PAYM Sprint 3,PAYM Sprint 4\",\"submodule\":\"NEFT_Inward\",\"description\":\"Verify if user is able to inquire NEFT Inward Payment for below combination\\n\\nCustomer Type: Retail\\nPayment Type : NEFT\\nApplicant Category: Individual\\nRequested Execution Date: Today's Date\\nInstrument Type: CHQ\\nInstrument Date: Today's Date\\nRemittance Amount: > 0\\nCredit Execution Date: Today's Date\\nBeneficiary Customer Acct Type: SA\\nCharge Option: Our\\nWaive Charges: No\",\"epic\":\"Payments\",\"userstory\":\"PAYM-1,PAYM-7,PAYM-8\",\"scenarioid\":\"Payments_NEFT Inward_05\",\"expectedresult\":\"User should be able to inquire NEFT payment successfully for retail customer\",\"scenarioname\":\"PassTestCase\"},{\"testcaseid\":\"Payments_RTGS Outward_06_TC_01\",\"module\":\"RTGS\",\"sprint\":\"PAYM Sprint 1,PAYM Sprint 3\",\"submodule\":\"RTGS_Outward\",\"description\":\"Verify if user is able to initiate RTGS Outward Payment for below combination\\n\\nCustomer Type: Retail\\nPayment Type : RTGS\\nApplicant Category: Individual\\nRequested Execution Date: Today's Date\\nInstrument Type: CHQ\\nInstrument Date: Today's Date\\nRemittance Amount: > 2Lac\\nCredit Execution Date: Today's Date\\nBeneficiary Customer Acct Type: SA\\nCharge Option: Our\\nWaive Charges: No\",\"epic\":\"Payments\",\"userstory\":\"PAYM-12,PAYM-3,PAYM-5\",\"scenarioid\":\"Payments_RTGS Outward_06\",\"expectedresult\":\"User should be able to initiate RTGS payment successfully for retail customer\",\"scenarioname\":\"PassTestCase\"},{\"testcaseid\":\"Payments_RTGS Outward_07_TC_01\",\"module\":\"RTGS\",\"sprint\":\"PAYM Sprint 2,PAYM Sprint 3\",\"submodule\":\"RTGS_Outward\",\"description\":\"Verify if user is able to initiate RTGS Outward Payment for below combination\\n\\nCustomer Type: Corporate\\nPayment Type : RTGS\\nRequested Execution Date: Back Date\\nInstrument Type: CHQ\\nInstrument Date: Back Date\\nRemittance Amount: > 2Lac\\nCredit Execution Date: Today's Date\\nBeneficiary Customer Acct Type: SA\\nCharge Option: Our\\nWaive Charges: No\",\"epic\":\"Payments\",\"userstory\":\"PAYM-12,PAYM-4\",\"scenarioid\":\"Payments_RTGS Outward_07\",\"expectedresult\":\"User should be able to initiate RTGS payment successfully for corporate customer\",\"scenarioname\":\"PassTestCase\"},{\"testcaseid\":\"Payments_RTGS Outward_08_TC_01\",\"module\":\"RTGS\",\"sprint\":\"PAYM Sprint 1\",\"submodule\":\"RTGS_Outward\",\"description\":\"Verify if user is able to initiate RTGS Outward Payment for below combination\\n\\nCustomer Type: Retail\\nPayment Type : RTGS\\nApplicant Category: Individual\\nRequested Execution Date: Today's Date\\nInstrument Type: CHQ\\nInstrument Date: Today's Date\\nRemittance Amount: <2Lac\\nCredit Execution Date: Today's Date\\nBeneficiary Customer Acct Type: SA\\nCharge Option: Our\\nWaive Charges: No\",\"epic\":\"Payments\",\"userstory\":\"PAYM-3\",\"scenarioid\":\"Payments_RTGS Outward_08\",\"expectedresult\":\"User should not be able to initiate RTGS payment for retail customer if payment amount is less than 2 Lac\",\"scenarioname\":\"PassTestCase\"},{\"testcaseid\":\"Payments_RTGS Outward_09_TC_01\",\"module\":\"RTGS\",\"sprint\":\"PAYM Sprint 2\",\"submodule\":\"RTGS_Outward\",\"description\":\"Verify if user is able to initiate RTGS Outward Payment for below combination\\n\\nCustomer Type: Corporate\\nPayment Type : RTGS\\nRequested Execution Date: Back Date\\nInstrument Type: CHQ\\nInstrument Date: Back Date\\nRemittance Amount: <2Lac\\nCredit Execution Date: Today's Date\\nBeneficiary Customer Acct Type: SA\\nCharge Option: Our\\nWaive Charges: No\",\"epic\":\"Payments\",\"userstory\":\"PAYM-4\",\"scenarioid\":\"Payments_RTGS Outward_09\",\"expectedresult\":\"User should not be able to initiate RTGS payment for corporate customer if payment amount is less than 2 Lac\",\"scenarioname\":\"PassTestCase\"}]"
+				}
+			]
+		},
+		{
+			"name": "Get e2e details",
+			"request": {
+				"url": "http://127.0.0.1:8082/api/gete2edetails",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"appName\" : \"RTA_App\",\n\t\"e2eId\" : [\"E2E_01\",\"E2E_02\",\"E2E_03\"],\n\t\"columns\" : [\"businessprocess\", \"subbusinessprocess\", \"e2eid\", \"scenarioname\", \"scenarioid\", \"description\", \"mappedtestcases\", \n\t\t\t\t\"userstory\", \"epic\", \"sprint\"]\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "0d1d27cb-df02-41bc-8dc1-f11bc0784035",
+					"name": "Get e2e details",
+					"originalRequest": {
+						"url": "http://127.0.0.1:8082/api/gete2edetails",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"appName\" : \"RTA_App\",\n\t\"e2eId\" : [\"E2E_01\",\"E2E_02\",\"E2E_03\"],\n\t\"columns\" : [\"businessprocess\", \"subbusinessprocess\", \"e2eid\", \"scenarioname\", \"scenarioid\", \"description\", \"mappedtestcases\", \n\t\t\t\t\"userstory\", \"epic\", \"sprint\"]\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-credentials",
+							"key": "access-control-allow-credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Fri, 21 May 2021 10:34:47 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "expires",
+							"key": "expires",
+							"value": "0",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"name": "pragma",
+							"key": "pragma",
+							"value": "no-cache",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-content-type-options",
+							"key": "x-content-type-options",
+							"value": "nosniff",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"name": "x-frame-options",
+							"key": "x-frame-options",
+							"value": "DENY",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"name": "x-xss-protection",
+							"key": "x-xss-protection",
+							"value": "1; mode=block",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [],
+					"responseTime": 445,
+					"body": "[{\"e2eid\":\"E2E_01\",\"sprint\":null,\"subbusinessprocess\":\"Car Loans\",\"description\":\"To check below functionalities with User Login:\\n1. Login with Valid/Invalid Credentiels.\\n2. Login with UserID, Patsswd more than specified length.\\n3. Reset Password Functionality\",\"businessprocess\":\"Loans\",\"mappedtestcases\":[83,84,85,86],\"epic\":null,\"userstory\":null,\"scenarioname\":null},{\"e2eid\":\"E2E_02\",\"sprint\":null,\"subbusinessprocess\":\"Car Loans\",\"description\":\"To check all the Links on login page as per the below sections:\\n1. New Score Version 2.0\\n2. Support Documents.\\n3.Additional Matches and Adobe Reader link\\n4. Footer Menu - Home, Sitemap, ContactUS\",\"businessprocess\":\"Loans\",\"mappedtestcases\":[83,84],\"epic\":null,\"userstory\":null,\"scenarioname\":null},{\"e2eid\":\"E2E_03\",\"sprint\":null,\"subbusinessprocess\":\"Car Loans\",\"description\":\"To check whether user is able to flush out all the entered login credentials after user clicks on Reset button\",\"businessprocess\":\"Loans\",\"mappedtestcases\":[85,83,84],\"epic\":null,\"userstory\":null,\"scenarioname\":null}]"
+				}
+			]
+		}
+	]
+}
